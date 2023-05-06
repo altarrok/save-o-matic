@@ -25,6 +25,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "429bd4f5-0f11-4596-bdfb-0d25e789f4ae"
+      }
+    },
+    "owner": "altarok"
   }
 }
