@@ -29,12 +29,8 @@ export const getAllIncomes = () => {
       tx.executeSql(
         'SELECT * FROM incomes;',
         [],
-        (_, resultSet) => {
-          const incomes = [];
-          for (let i = 0; i < resultSet.rows.length; i++) {
-            incomes.push(resultSet.rows.item(i));
-          }
-          resolve(incomes);
+        (_, { rows: { _array } }) => {
+            resolve(_array);
         },
         (_, error) => {
           reject(error);
